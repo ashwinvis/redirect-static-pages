@@ -29,9 +29,10 @@ This will:
 ## Configuration
 
 The domains are configured in `redirect-config.js` and `generate_redirects.py`:
-- `OLD_DOMAIN`: old.fluid.quest/redirect-static-pages
+- `OLD_DOMAIN`: old.fluid.quest
 - `NEW_DOMAIN`: example.com
 - `PROTOCOL`: https://
+- `PATH_PREFIX` (see `generate_redirects.py`. Only useful for generating `<meta>` tags)
 
 The template uses these values dynamically to avoid hardcoding.
 

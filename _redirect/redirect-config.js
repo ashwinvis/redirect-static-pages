@@ -1,7 +1,7 @@
 // Domain redirect configuration
 
 const REDIRECT_CONFIG = {
-  OLD_DOMAIN: 'old.fluid.quest/redirect-static-pages/',
+  OLD_DOMAIN: 'old.fluid.quest',
   NEW_DOMAIN: 'example.com',
   PROTOCOL: 'https://'
 };

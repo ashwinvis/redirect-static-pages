@@ -14,9 +14,13 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 # Configuration
-OLD_DOMAIN = "old.fluid.quest/redirect-static-pages"
+OLD_DOMAIN = "old.fluid.quest"
 NEW_DOMAIN = "example.com"
 PROTOCOL = "https://"
+## If top-level repo like username.github.io
+# PATH_PREFIX = "/"
+## In this case
+PATH_PREFIX = "/redirect-static-pages/"
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent
@@ -54,9 +58,9 @@ for html_file in html_files:
     # NOTE: the following special case may need correction
     # if there are other index.html pages
     if html_file.name in ("index.html", "404.html"):
-        path = "/"
+        path = PATH_PREFIX
     else:
-        path = "/" + str(html_file)
+        path = PATH_PREFIX + str(html_file)
 
     # Render template
     content = template.render(
